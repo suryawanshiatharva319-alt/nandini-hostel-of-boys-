@@ -1,311 +1,118 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nandini Boys Hostel - Premium & Affordable Student Accommodation</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts (Poppins & Inter) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        navy: {
-                            800: '#1E3E62',
-                            900: '#0F2C59',
-                            950: '#0A1D3C',
-                        },
-                        gold: {
-                            400: '#FFC107',
-                            500: '#E5A93B',
-                            600: '#C98D28',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Poppins', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-        }
-        .font-heading {
-            font-family: 'Poppins', sans-serif;
-        }
-        .hero-pattern {
-            background-color: #0F2C59;
-            background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
-            background-size: 24px 24px;
-        }
-        .gold-gradient {
-            background: linear-gradient(135deg, #FFD700 0%, #E5A93B 100%);
-        }
-        .gold-border {
-            border-image: linear-gradient(to right, #FFD700, #E5A93B) 1;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(226, 232, 240, 0.8);
-        }
-        .badge-ribbon {
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandini Boys Hostel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body { font-family: Inter, Arial, sans-serif; }
+    .gold { background: linear-gradient(135deg, #facc15, #d97706); }
+    .navy { background: #0f172a; }
+  </style>
 </head>
-<body class="antialiased selection:bg-gold-400 selection:text-navy-900 pb-16 md:pb-0">
-
-    <!-- Top Urgent Announcement Banner -->
-    <div class="bg-gold-500 text-navy-950 px-4 py-2 text-xs md:text-sm font-semibold text-center shadow-inner flex justify-center items-center gap-2">
-        <i class="fa-solid fa-fire animate-bounce"></i>
-        <span>Admission Open for Academic Session! Rooms starting at just <strong class="underline decoration-navy-900">₹2,000/month</strong>. Reserve your bed today!</span>
+<body class="bg-slate-50 text-slate-800">
+  <header class="navy text-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-xl gold flex items-center justify-center text-slate-900 font-black text-2xl">N</div>
+        <div>
+          <div class="text-xl font-bold">NANDINI BOYS HOSTEL</div>
+          <div class="text-xs text-slate-300">A Home Away From Home</div>
+        </div>
+      </div>
+      <a href="tel:9595953075" class="gold text-slate-900 font-bold px-4 py-2 rounded-lg shadow-md">
+        <i class="fa-solid fa-phone mr-2"></i>Call: 9595953075
+      </a>
     </div>
+  </header>
 
-    <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 bg-navy-900 text-white shadow-lg border-b border-navy-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Brand Logo & Name -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center text-navy-950 font-black text-2xl shadow-lg group-hover:scale-105 transition-transform">
-                        N
-                    </div>
-                    <div>
-                        <span class="block text-xl md:text-2xl font-extrabold tracking-tight font-heading text-white">
-                            NANDINI <span class="text-gold-400">BOYS HOSTEL</span>
-                        </span>
-                        <span class="block text-xs text-slate-300 font-medium tracking-wide">
-                            A Home Away From Home • <span class="text-gold-400">Since 1995</span>
-                        </span>
-                    </div>
-                </a>
-
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
-                    <a href="#overview" class="text-slate-200 hover:text-gold-400 transition">Overview</a>
-                    <a href="#rooms" class="text-slate-200 hover:text-gold-400 transition">Rooms & Rent</a>
-                    <a href="#calculator" class="text-slate-200 hover:text-gold-400 transition">Rent Calculator</a>
-                    <a href="#facilities" class="text-slate-200 hover:text-gold-400 transition">Facilities</a>
-                    <a href="#faq" class="text-slate-200 hover:text-gold-400 transition">FAQs</a>
-                    <a href="#contact" class="text-slate-200 hover:text-gold-400 transition">Contact</a>
-                </nav>
-
-                <!-- Call Button CTA -->
-                <div class="hidden lg:flex items-center gap-3">
-                    <a href="tel:9595353075" class="gold-gradient hover:opacity-90 text-navy-950 font-bold px-4 py-2.5 rounded-xl text-sm shadow-md flex items-center gap-2 transition hover:-translate-y-0.5">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>Call: 9595953075</span>
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Toggle Button -->
-                <button id="mobileMenuBtn" class="md:hidden text-2xl text-gold-400 p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
-                    <i class="fa-solid fa-bars" id="menuIcon"></i>
-                </button>
-            </div>
+  <main>
+    <section class="bg-slate-900 text-white py-20">
+      <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="inline-block mb-4 px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 border border-yellow-500/40 text-sm font-semibold">
+            Premium Student Accommodation
+          </p>
+          <h1 class="text-4xl md:text-6xl font-black leading-tight">
+            Best Stay.<br>
+            <span class="text-yellow-400">Better Future.</span>
+          </h1>
+          <p class="mt-6 text-slate-300 text-lg">
+            Safe, affordable, and comfortable rooms for students with a peaceful study environment and trusted support.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="tel:9595953075" class="gold text-slate-900 font-bold px-6 py-3 rounded-xl text-center">
+              <i class="fa-solid fa-phone mr-2"></i>Book a Call
+            </a>
+            <a href="https://wa.me/919595953075?text=Hi%20Nandini%20Boys%20Hostel%2C%20I%20want%20to%20inquire%20about%20room%20availability." target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-3 rounded-xl text-center">
+              <i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp Us
+            </a>
+          </div>
         </div>
 
-        <!-- Mobile Drawer Navigation -->
-        <div id="mobileDrawer" class="hidden md:hidden bg-navy-950 border-t border-navy-800 px-4 pt-3 pb-6 space-y-3">
-            <a href="#overview" class="mobile-nav-link block py-2 text-slate-200 hover:text-gold-400 font-medium">Overview</a>
-            <a href="#rooms" class="mobile-nav-link block py-2 text-slate-200 hover:text-gold-400 font-medium">Rooms & Rent</a>
-            <a href="#calculator" class="mobile-nav-link block py-2 text-slate-200 hover:text-gold-400 font-medium">Rent Calculator</a>
-            <a href="#facilities" class="mobile-nav-link block py-2 text-slate-200 hover:text-gold-400 font-medium">Facilities</a>
-            <a href="#faq" class="mobile-nav-link block py-2 text-slate-200 hover:text-gold-400 font-medium">FAQs</a>
-            <a href="#contact" class="mobile-nav-link block py-2 text-slate-200 hover:text-gold-400 font-medium">Contact Us</a>
-            <div class="pt-2 flex flex-col gap-2">
-                <a href="tel:9595953075" class="w-full text-center gold-gradient text-navy-950 font-bold py-2.5 rounded-lg text-sm">
-                    <i class="fa-solid fa-phone mr-2"></i>Call 9595353075
-                </a>
+        <div class="bg-white text-slate-900 rounded-3xl shadow-2xl p-8">
+          <div class="text-center">
+            <p class="text-sm font-bold uppercase tracking-widest text-slate-500">Official Choice</p>
+            <h2 class="mt-4 text-3xl font-black text-slate-900">BEST ONE</h2>
+            <div class="mt-6 bg-slate-900 text-yellow-400 py-3 rounded-xl font-extrabold text-xl">YOUR BEST CHOICE</div>
+          </div>
+          <div class="mt-8 space-y-4 text-sm">
+            <div class="flex justify-between border-b pb-3">
+              <span class="text-slate-600">Monthly Rent</span>
+              <span class="font-bold">₹2,000 / person</span>
             </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="overview" class="relative hero-pattern text-white py-16 md:py-24 overflow-hidden border-b border-navy-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Hero Left Content -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 bg-navy-800/80 border border-gold-400/30 px-3.5 py-1.5 rounded-full text-xs md:text-sm font-semibold text-gold-400">
-                        <i class="fa-solid fa-award"></i>
-                        <span>Serving Students & Parents Since 1995 (30+ Years Trust)</span>
-                    </div>
-
-                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black font-heading tracking-tight leading-tight">
-                        BEST STAY.<br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-amber-300 to-yellow-500">
-                            BETTER FUTURE.
-                        </span>
-                    </h1>
-
-                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        Welcome to <strong>Nandini Boys Hostel</strong> — a premier, safe, and peaceful stay tailored for students. Perfectly located near your college so you save commuting time and focus on your studies.
-                    </p>
-
-                    <!-- Key Metrics Pill Bar -->
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2 max-w-lg mx-auto lg:mx-0 text-left">
-                        <div class="bg-navy-800/60 p-3 rounded-xl border border-navy-700">
-                            <span class="block text-gold-400 text-xl font-bold font-heading">₹2,000</span>
-                            <span class="text-xs text-slate-300">Per Month / Student</span>
-                        </div>
-                        <div class="bg-navy-800/60 p-3 rounded-xl border border-navy-700">
-                            <span class="block text-gold-400 text-xl font-bold font-heading">Max 4</span>
-                            <span class="text-xs text-slate-300">Students / Room</span>
-                        </div>
-                        <div class="bg-navy-800/60 p-3 rounded-xl border border-navy-700 col-span-2 sm:col-span-1">
-                            <span class="block text-gold-400 text-xl font-bold font-heading">100m</span>
-                            <span class="text-xs text-slate-300">Close to College</span>
-                        </div>
-                    </div>
-
-                    <!-- Call To Action Buttons -->
-                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#inquiry" class="gold-gradient text-navy-950 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-gold-400/20 text-center text-base transition hover:-translate-y-1 flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-paper-plane"></i>
-                            <span>Book Room / Send Inquiry</span>
-                        </a>
-                        <a href="https://wa.me/919595353075?text=Hi%20Nandini%20Boys%20Hostel,%20I%20want%20to%20inquire%20about%20room%20availability." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg text-center text-base transition hover:-translate-y-1 flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-xl"></i>
-                            <span>WhatsApp Us Directly</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Hero Right Card Badge (Poster Replica Style Card) -->
-                <div class="lg:col-span-5 flex justify-center">
-                    <div class="relative w-full max-w-md">
-                        <!-- Background Glow Effect -->
-                        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-gold-400 to-amber-600 blur-lg opacity-40 animate-pulse"></div>
-
-                        <!-- Card Body -->
-                        <div class="relative bg-white text-navy-950 rounded-3xl p-6 sm:p-8 shadow-2xl border-4 border-gold-400">
-                            
-                            <!-- Floating Badge -->
-                            <div class="absolute -top-5 right-6 bg-navy-900 border-2 border-gold-400 text-gold-400 px-4 py-1.5 rounded-full text-xs font-black shadow-md uppercase tracking-wider flex items-center gap-1.5">
-                                <i class="fa-solid fa-star text-amber-400"></i> POPULAR ONE
-                            </div>
-
-                            <div class="text-center space-y-4 pt-2">
-                                <span class="inline-block text-xs font-extrabold uppercase tracking-widest text-navy-800 bg-slate-100 px-3 py-1 rounded-md">
-                                    Official Choice
-                                </span>
-
-                                <h2 class="text-3xl font-black font-heading text-navy-900 tracking-tight">
-                                    BEST ONE
-                                </h2>
-                                
-                                <div class="bg-navy-900 text-gold-400 py-3 px-4 rounded-xl shadow-inner font-extrabold text-xl tracking-wide font-heading">
-                                    YOUR BEST CHOICE
-                                </div>
-
-                                <p class="text-xs font-bold tracking-widest text-slate-500 uppercase">
-                                    Comfort • Safety • Success
-                                </p>
-
-                                <div class="border-t border-b border-slate-200 py-4 my-2 text-center space-y-1">
-                                    <p class="text-sm font-semibold text-slate-600">Tagline Commitment</p>
-                                    <p class="text-base font-extrabold text-navy-900 italic font-heading">
-                                        "Where Comfort Meets DISCIPLINE &amp; SUCCESS"
-                                    </p>
-                                </div>
-
-                                <div class="bg-slate-50 rounded-xl p-4 text-left space-y-2 border border-slate-200">
-                                    <div class="flex items-center justify-between text-sm">
-                                        <span class="text-slate-600"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Monthly Rent:</span>
-                                        <span class="font-bold text-navy-900 text-base">₹2,000 / person</span>
-                                    </div>
-                                    <div class="flex items-center justify-between text-sm">
-                                        <span class="text-slate-600"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Room Capacity:</span>
-                                        <span class="font-bold text-navy-900">1 to 4 Students/Room</span>
-                                    </div>
-                                    <div class="flex items-center justify-between text-sm">
-                                        <span class="text-slate-600"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i>Hot Water:</span>
-                                        <span class="font-bold text-navy-900">5:00 AM - 9:00 AM</span>
-                                    </div>
-                                </div>
-
-                                <a href="tel:9595353075" class="block w-full bg-navy-900 hover:bg-navy-950 text-white font-bold py-3.5 rounded-xl text-center shadow-md text-sm transition">
-                                    <i class="fa-solid fa-phone mr-2 text-gold-400"></i>Call Now: 9595353075
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="flex justify-between border-b pb-3">
+              <span class="text-slate-600">Room Capacity</span>
+              <span class="font-bold">1 to 4 Students</span>
             </div>
+            <div class="flex justify-between border-b pb-3">
+              <span class="text-slate-600">Hot Water</span>
+              <span class="font-bold">5:00 AM - 9:00 AM</span>
+            </div>
+          </div>
+          <a href="tel:9595953075" class="mt-8 block gold text-slate-900 font-bold text-center py-3 rounded-xl">
+            <i class="fa-solid fa-phone mr-2"></i>Call Now: 9595953075
+          </a>
         </div>
+      </div>
     </section>
 
-    <!-- Room Details & Pricing Section -->
-    <section id="rooms" class="py-16 md:py-24 bg-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold tracking-widest text-gold-600 uppercase mb-2">Flexible Occupancy Options</h2>
-                <p class="text-3xl sm:text-4xl font-extrabold font-heading text-navy-900">Room Sharing & Rent Structure</p>
-                <div class="w-16 h-1 bg-gold-500 mx-auto my-4 rounded-full"></div>
-                <p class="text-slate-600 text-base">
-                    Every room is priced at a flat <strong>₹2,000 per person per month</strong>. Rooms are allocated with maximum 4 students based on room dimensions to guarantee adequate space and comfortable study environment.
-                </p>
-            </div>
+    <section class="max-w-6xl mx-auto px-4 py-16">
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div class="bg-white shadow rounded-2xl p-6 border border-slate-200">
+          <div class="text-3xl text-yellow-500 mb-3"><i class="fa-solid fa-house"></i></div>
+          <h3 class="text-xl font-bold mb-2">Comfortable Rooms</h3>
+          <p class="text-slate-600">Clean, safe, and peaceful rooms designed for student living.</p>
+        </div>
+        <div class="bg-white shadow rounded-2xl p-6 border border-slate-200">
+          <div class="text-3xl text-yellow-500 mb-3"><i class="fa-solid fa-shield-heart"></i></div>
+          <h3 class="text-xl font-bold mb-2">Safety First</h3>
+          <p class="text-slate-600">Well-managed hostel environment with discipline and support.</p>
+        </div>
+        <div class="bg-white shadow rounded-2xl p-6 border border-slate-200">
+          <div class="text-3xl text-yellow-500 mb-3"><i class="fa-solid fa-location-dot"></i></div>
+          <h3 class="text-xl font-bold mb-2">Near Campus</h3>
+          <p class="text-slate-600">Located close to college to help students save commute time.</p>
+        </div>
+      </div>
+    </section>
 
-            <!-- Room Capacity Grid Cards -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <!-- Card 1: Single Seater -->
-                <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 bg-navy-900/10 text-navy-900 rounded-xl flex items-center justify-center text-xl mb-4">
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Compact Private</span>
-                        <h3 class="text-xl font-bold font-heading text-navy-900 mt-1">1-Seater Room</h3>
-                        <div class="my-4">
-                            <span class="text-3xl font-extrabold text-navy-900">₹2,000</span>
-                            <span class="text-slate-500 text-sm">/ student / mo</span>
-                        </div>
-                        <ul class="text-sm text-slate-600 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Solo Privacy & Quiet Study</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Personal Study Desk Space</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Dedicated Bed & Storage</li>
-                        </ul>
-                    </div>
-                    <a href="#inquiry" onclick="preselectRoom('1-Seater Room')" class="block text-center bg-slate-100 hover:bg-navy-900 hover:text-white text-navy-900 font-semibold py-2.5 rounded-xl transition text-sm">Select Option</a>
-                </div>
-
-                <!-- Card 2: 2-Seater Room -->
-                <div class="bg-white rounded-2xl p-6 shadow-md border border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 bg-navy-900/10 text-navy-900 rounded-xl flex items-center justify-center text-xl mb-4">
-                            <i class="fa-solid fa-user-group"></i>
-                        </div>
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Double Sharing</span>
-                        <h3 class="text-xl font-bold font-heading text-navy-900 mt-1">2-Seater Room</h3>
-                        <div class="my-4">
-                            <span class="text-3xl font-extrabold text-navy-900">₹2,000</span>
-                            <span class="text-slate-500 text-sm">/ student / mo</span>
-                        </div>
-                        <ul class="text-sm text-slate-600 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Balanced Privacy & Company</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Individual Study Area</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Adequate Ventilation & Light</li>
-                        </ul>
-                    </div>
-                    <a href="#inquiry" onclick="preselectRoom('2-Seater Room')" class="block text-center bg-slate-100 hover:bg-navy-900 hover:text-white text-navy-900 font-semibold py-2.5 rounded-xl transition text-sm">Select Option</a>
-                </div>
-
-                <!-- Card 3: 3-Seater Room (Most Popular) -->
-                <div class="bg-white rounded-2xl p-6 shadow-xl border-2 border-gold-400 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relativ
+    <section id="contact" class="bg-slate-900 text-white py-16">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-black mb-6">Contact Nandini Boys Hostel</h2>
+        <p class="text-slate-300 text-lg">For room availability and inquiries, call us directly.</p>
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="tel:9595953075" class="gold text-slate-900 font-bold px-6 py-3 rounded-xl inline-block">
+            <i class="fa-solid fa-phone mr-2"></i>9595953075
+          </a>
+          <a href="https://wa.me/919595953075?text=Hi%20Nandini%20Boys%20Hostel%2C%20I%20want%20to%20inquire%20about%20room%20availability." target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-3 rounded-xl inline-block">
+            <i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
