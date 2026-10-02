@@ -13,11 +13,71 @@
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800">
+  <!-- Announcement Bar -->
   <div class="gold text-slate-950 text-center text-sm font-semibold py-2">
-    ⚡Admissions open - rooms from ₹2,000/month
+    ⚡ Admissions open - rooms from ₹2,000/month
   </div>
 
+  <!-- Header / Navigation -->
+  <header class="navy sticky top-0 z-50 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-amber-400">Nandini Boys Hostel</h1>
+      <nav class="space-x-4 text-sm font-medium">
+        <a href="#rooms" class="hover:text-amber-400 transition">Rooms</a>
+        <a href="#facilities" class="hover:text-amber-400 transition">Facilities</a>
+        <a href="#rating" class="hover:text-amber-400 transition">Rating</a>
+        <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <main id="top">
+    <!-- Hero Banner -->
+    <section class="navy text-white py-16 text-center">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Welcome to Nandini Boys Hostel</h2>
+        <p class="text-slate-300 text-lg mb-6">Safe, affordable, and comfortable accommodation for students.</p>
+        <a href="#contact" class="gold text-slate-950 font-bold px-6 py-3 rounded-lg shadow hover:opacity-90 inline-block transition">Inquire Now</a>
+      </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-12 bg-white">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-2xl font-bold text-center mb-8">Our Room Options</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-6 border rounded-xl bg-slate-50">
+            <h3 class="text-xl font-bold mb-2">Single Room</h3>
+            <p class="text-slate-600 mb-4">Private space with bed, table, and wardrobe.</p>
+            <span class="text-amber-600 font-bold">₹4,500 / month</span>
+          </div>
+          <div class="p-6 border rounded-xl bg-slate-50">
+            <h3 class="text-xl font-bold mb-2">2 Sharing</h3>
+            <p class="text-slate-600 mb-4">Shared room with individual study desk.</p>
+            <span class="text-amber-600 font-bold">₹3,000 / month</span>
+          </div>
+          <div class="p-6 border rounded-xl bg-slate-50">
+            <h3 class="text-xl font-bold mb-2">3 Sharing</h3>
+            <p class="text-slate-600 mb-4">Economical sharing with basic amenities.</p>
+            <span class="text-amber-600 font-bold">₹2,000 / month</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-12 bg-slate-100">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <h2 class="text-2xl font-bold mb-8">Facilities Provided</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fas fa-wifi text-2xl text-amber-500 mb-2"></i><p class="font-semibold">High-Speed WiFi</p></div>
+          <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fas fa-utensils text-2xl text-amber-500 mb-2"></i><p class="font-semibold">Mess Facility</p></div>
+          <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fas fa-shield-alt text-2xl text-amber-500 mb-2"></i><p class="font-semibold">24/7 Security</p></div>
+          <div class="p-4 bg-white rounded-xl shadow-sm"><i class="fas fa-bolt text-2xl text-amber-500 mb-2"></i><p class="font-semibold">Power Backup</p></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Rating Section -->
     <section id="rating" class="py-12 bg-white text-center">
       <div class="max-w-md mx-auto px-4">
@@ -41,11 +101,21 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="navy text-white py-12 text-center">
+      <div class="max-w-md mx-auto px-4">
+        <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+        <p class="text-slate-300 mb-2">📍 Nandini Boys Hostel, Campus Area</p>
+        <p class="text-slate-300 mb-4">📞 Call / WhatsApp: +91 9876543210</p>
+      </div>
+    </section>
+
     <script>
-      const SCRIPT_URL =[https://script.google.com/a/macros/.../exec](https://script.google.com/a/macros/.../exec) 
+     const SCRIPT_URL = "https://script.google.com/a/macros/somaiya.edu/s/AKfycbyBLbrL5A5mMrtcNK3BKdZqg4IcLoela4xPKv_mOpiYCKmDff_Kk-7LH1SQKU0/exec";
+  
 
       function fetchRatings() {
-        if (SCRIPT_URL === [https://script.google.com/a/macros/.../exec](https://script.google.com/a/macros/.../exec) return;
+        if (SCRIPT_URL === "PASTE_YOUR_COPIED_URL_HERE") return;
         fetch(SCRIPT_URL)
           .then(res => res.json())
           .then(data => {
