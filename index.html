@@ -110,18 +110,18 @@
       </div>
     </section>
 
-    <script>
-     const SCRIPT_URL = "https://script.google.com/a/macros/somaiya.edu/s/AKfycbyBLbrL5A5mMrtcNK3BKdZqg4IcLoela4xPKv_mOpiYCKmDff_Kk-7LH1SQKU0/exec";
-  
+        <script>
+      const SCRIPT_URL = "PASTE_YOUR_FULL_SCRIPT_URL_HERE";
 
       function fetchRatings() {
-        if (SCRIPT_URL === "PASTE_YOUR_COPIED_URL_HERE") return;
+        if (!SCRIPT_URL.startsWith("http")) return;
         fetch(SCRIPT_URL)
           .then(res => res.json())
           .then(data => {
             document.getElementById('avg-rating').innerText = data.average;
             document.getElementById('total-votes').innerText = `Based on ${data.totalVotes} total review(s)`;
-          });
+          })
+          .catch(err => console.error(err));
       }
 
       function submitRating(stars) {
@@ -144,10 +144,16 @@
             document.getElementById('avg-rating').innerText = data.average;
             document.getElementById('total-votes').innerText = `Based on ${data.totalVotes} total review(s)`;
             document.getElementById('rating-result').innerText = 'Thank you for your rating!';
+          })
+          .catch(err => {
+            document.getElementById('rating-result').innerText = 'Error submitting vote.';
+            console.error(err);
           });
       }
 
       fetchRatings();
+        </script>
+    
     </script>
   </main>
 </body>
