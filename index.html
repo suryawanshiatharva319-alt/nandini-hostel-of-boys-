@@ -25,7 +25,6 @@
       <nav class="space-x-4 text-sm font-medium">
         <a href="#rooms" class="hover:text-amber-400 transition">Rooms</a>
         <a href="#facilities" class="hover:text-amber-400 transition">Facilities</a>
-        <a href="#rating" class="hover:text-amber-400 transition">Rating</a>
         <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
       </nav>
     </div>
@@ -78,29 +77,6 @@
       </div>
     </section>
 
-    <!-- Rating Section -->
-    <section id="rating" class="py-12 bg-white text-center">
-      <div class="max-w-md mx-auto px-4">
-        <h2 class="text-2xl font-bold text-slate-800 mb-2">Rate Our Hostel</h2>
-        
-        <div class="mb-4">
-          <span id="avg-rating" class="text-3xl font-bold text-amber-500">0.0</span>
-          <span class="text-xl text-amber-400">★</span>
-          <p id="total-votes" class="text-sm text-slate-500 mt-1">Loading reviews...</p>
-        </div>
-
-        <div id="star-container" class="flex justify-center space-x-2 text-4xl mb-3">
-          <button onclick="submitRating(1)" class="star-btn text-gray-300 hover:text-amber-400 transition">★</button>
-          <button onclick="submitRating(2)" class="star-btn text-gray-300 hover:text-amber-400 transition">★</button>
-          <button onclick="submitRating(3)" class="star-btn text-gray-300 hover:text-amber-400 transition">★</button>
-          <button onclick="submitRating(4)" class="star-btn text-gray-300 hover:text-amber-400 transition">★</button>
-          <button onclick="submitRating(5)" class="star-btn text-gray-300 hover:text-amber-400 transition">★</button>
-        </div>
-
-        <p id="rating-result" class="text-amber-600 font-semibold h-6"></p>
-      </div>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="navy text-white py-12 text-center">
       <div class="max-w-md mx-auto px-4">
@@ -109,52 +85,7 @@
         <p class="text-slate-300 mb-4">📞 Call / WhatsApp: +91 9876543210</p>
       </div>
     </section>
-
-        <script>
-      const SCRIPT_URL = "PASTE_YOUR_FULL_SCRIPT_URL_HERE";
-
-      function fetchRatings() {
-        if (!SCRIPT_URL.startsWith("http")) return;
-        fetch(SCRIPT_URL)
-          .then(res => res.json())
-          .then(data => {
-            document.getElementById('avg-rating').innerText = data.average;
-            document.getElementById('total-votes').innerText = `Based on ${data.totalVotes} total review(s)`;
-          })
-          .catch(err => console.error(err));
-      }
-
-      function submitRating(stars) {
-        const starBtns = document.querySelectorAll('#star-container .star-btn');
-        starBtns.forEach((btn, index) => {
-          if (index < stars) {
-            btn.classList.remove('text-gray-300');
-            btn.classList.add('text-amber-400');
-          } else {
-            btn.classList.remove('text-amber-400');
-            btn.classList.add('text-gray-300');
-          }
-        });
-
-        document.getElementById('rating-result').innerText = 'Submitting your vote...';
-
-        fetch(`${SCRIPT_URL}?action=rate&rating=${stars}`)
-          .then(res => res.json())
-          .then(data => {
-            document.getElementById('avg-rating').innerText = data.average;
-            document.getElementById('total-votes').innerText = `Based on ${data.totalVotes} total review(s)`;
-            document.getElementById('rating-result').innerText = 'Thank you for your rating!';
-          })
-          .catch(err => {
-            document.getElementById('rating-result').innerText = 'Error submitting vote.';
-            console.error(err);
-          });
-      }
-
-      fetchRatings();
-        </script>
-    
-    </script>
   </main>
 </body>
 </html>
+
