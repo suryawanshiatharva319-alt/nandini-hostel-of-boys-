@@ -4,29 +4,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nandini Boys Hostel</title>
+<title>Nandini Boys Hostel | Student Accommodation</title>
+
+<meta name="description"
+content="Nandini Boys Hostel - Affordable boys hostel with 2, 3 and 4 sharing rooms, attached bathrooms and friendly environment.">
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#f5f7fb;
-    color:#172033;
+    font-family:'Inter',sans-serif;
+    background:#f7f8fc;
+    color:#182033;
     line-height:1.6;
 }
 
-nav{
-    position:sticky;
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
     top:0;
+    left:0;
+    right:0;
     z-index:1000;
-    background:#101c3a;
-    padding:15px 6%;
+    background:rgba(12,20,40,.92);
+    backdrop-filter:blur(12px);
+    padding:15px 7%;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -34,416 +48,620 @@ nav{
 
 .logo{
     color:white;
-    font-size:22px;
-    font-weight:bold;
+    font-size:21px;
+    font-weight:800;
 }
 
 .logo span{
-    color:#ffb703;
+    color:#f6b73c;
 }
 
-nav a{
-    color:white;
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#fff;
     text-decoration:none;
-    margin-left:18px;
     font-size:14px;
+    font-weight:500;
 }
 
-nav a:hover{
-    color:#ffb703;
+.nav-links a:hover{
+    color:#f6b73c;
 }
+
+/* HERO */
 
 .hero{
-    min-height:85vh;
+    min-height:100vh;
+    background:
+    linear-gradient(
+        rgba(7,15,32,.72),
+        rgba(7,15,32,.82)
+    ),
+    url("hostel-front.jpg") center/cover;
+
     display:flex;
     align-items:center;
-    padding:60px 7%;
-    background:
-    linear-gradient(rgba(10,20,45,.78),rgba(10,20,45,.78)),
-    url("hostel.jpg") center/cover;
+    padding:120px 7% 70px;
     color:white;
 }
 
 .hero-content{
-    max-width:680px;
+    max-width:760px;
 }
 
-.badge{
+.tag{
     display:inline-block;
-    background:#ffb703;
-    color:#111;
-    padding:7px 15px;
-    border-radius:20px;
-    font-weight:bold;
-    margin-bottom:15px;
+    padding:8px 16px;
+    border-radius:30px;
+    background:rgba(246,183,60,.15);
+    border:1px solid #f6b73c;
+    color:#f6b73c;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:clamp(40px,8vw,70px);
+    font-size:clamp(42px,7vw,78px);
     line-height:1.05;
-    margin-bottom:20px;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:#f6b73c;
 }
 
 .hero p{
+    max-width:620px;
+    color:#e5e7eb;
     font-size:18px;
-    color:#e8eaf0;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
-.price{
-    font-size:28px;
-    font-weight:bold;
-    color:#ffb703;
-    margin-bottom:20px;
+.hero-price{
+    font-size:30px;
+    font-weight:800;
+    color:#f6b73c;
+    margin-bottom:25px;
 }
 
 .btn{
-    display:inline-block;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
     padding:13px 20px;
-    border-radius:8px;
+    border-radius:9px;
     text-decoration:none;
-    font-weight:bold;
-    margin:5px 3px;
-    cursor:pointer;
+    font-weight:700;
+    margin:4px;
+    transition:.25s;
     border:none;
+    cursor:pointer;
 }
 
-.btn-primary{
-    background:#ffb703;
-    color:#111;
+.btn:hover{
+    transform:translateY(-2px);
 }
 
-.btn-dark{
+.btn-gold{
+    background:#f6b73c;
+    color:#111827;
+}
+
+.btn-white{
     background:white;
-    color:#101c3a;
+    color:#111827;
 }
 
-.btn-whatsapp{
-    background:#25D366;
+.btn-green{
+    background:#20c76b;
     color:white;
 }
 
+/* COMMON */
+
 section{
-    padding:70px 7%;
+    padding:90px 7%;
 }
 
-.section-title{
+.section-head{
     text-align:center;
-    margin-bottom:40px;
+    max-width:700px;
+    margin:0 auto 50px;
 }
 
-.section-title h2{
-    font-size:34px;
-    margin-bottom:8px;
+.section-head small{
+    color:#d39214;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:2px;
 }
 
-.section-title p{
-    color:#667085;
+.section-head h2{
+    font-size:38px;
+    margin:8px 0 12px;
 }
 
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:18px;
+.section-head p{
+    color:#687386;
 }
 
-.feature{
+/* QUICK INFO */
+
+.quick-info{
+    margin-top:-45px;
+    position:relative;
+    z-index:5;
+    padding:0 7%;
+}
+
+.info-box{
     background:white;
+    border-radius:18px;
+    box-shadow:0 15px 45px rgba(0,0,0,.1);
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    overflow:hidden;
+}
+
+.info-item{
     padding:25px;
-    border-radius:15px;
     text-align:center;
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
+    border-right:1px solid #eee;
 }
 
-.feature-icon{
-    font-size:35px;
-    margin-bottom:10px;
+.info-item:last-child{
+    border:none;
 }
 
-.feature p{
-    color:#667085;
-    font-size:14px;
+.info-item .icon{
+    font-size:28px;
 }
 
-.rooms{
-    background:#eef2f8;
+.info-item strong{
+    display:block;
+    margin-top:7px;
+}
+
+.info-item span{
+    font-size:13px;
+    color:#70798a;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:22px;
+    box-shadow:0 20px 45px rgba(0,0,0,.13);
+}
+
+.about-text h2{
+    font-size:40px;
+    margin:10px 0 18px;
+}
+
+.about-text p{
+    color:#687386;
+    margin-bottom:18px;
+}
+
+.check{
+    display:flex;
+    gap:12px;
+    margin:12px 0;
+    font-weight:600;
+}
+
+.check span{
+    color:#20a95b;
+}
+
+/* ROOMS */
+
+.rooms-section{
+    background:#101a32;
+    color:white;
+}
+
+.rooms-section .section-head p{
+    color:#b9c1d1;
 }
 
 .room-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:25px;
 }
 
 .room-card{
     background:white;
+    color:#172033;
     border-radius:18px;
     overflow:hidden;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
     transition:.3s;
 }
 
 .room-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-7px);
 }
 
-.room-image{
-    height:180px;
-    background:#d9dee8;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:50px;
+.room-img{
+    height:210px;
+    background:#ddd;
+    overflow:hidden;
 }
 
-.room-content{
-    padding:22px;
+.room-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.room-content h3{
+.room-body{
+    padding:25px;
+}
+
+.room-body h3{
     font-size:22px;
 }
 
 .room-price{
-    color:#e58f00;
-    font-weight:bold;
-    font-size:21px;
-    margin:8px 0;
+    color:#d39214;
+    font-size:23px;
+    font-weight:800;
+    margin:7px 0 15px;
 }
 
-.room-content ul{
+.room-body ul{
     list-style:none;
-    color:#667085;
-    font-size:14px;
+    color:#687386;
 }
 
-.room-content li{
-    margin:5px 0;
+.room-body li{
+    margin:7px 0;
 }
 
-.single-room{
-    margin-top:35px;
-    background:#101c3a;
-    color:white;
-    padding:30px;
+/* SINGLE ROOM */
+
+.single-box{
+    margin-top:30px;
+    background:#18233e;
+    border:1px solid rgba(255,255,255,.1);
     border-radius:18px;
+    padding:30px;
 }
 
-.single-room h3{
-    color:#ffb703;
-    margin-bottom:10px;
+.single-box h3{
+    color:#f6b73c;
+}
+
+.single-box p{
+    color:#c9ced9;
 }
 
 .calculator{
-    margin-top:20px;
+    margin-top:18px;
     display:flex;
     gap:10px;
     flex-wrap:wrap;
 }
 
 .calculator input{
-    padding:12px;
-    border-radius:7px;
-    border:none;
-    width:200px;
-}
-
-#calculatedFee{
-    margin-top:15px;
-    font-size:20px;
-    font-weight:bold;
-    color:#ffb703;
-}
-
-.rules-container{
-    max-width:850px;
-    margin:auto;
-}
-
-.rule{
-    background:white;
-    margin:10px 0;
-    padding:16px 20px;
-    border-radius:10px;
-    box-shadow:0 3px 12px rgba(0,0,0,.05);
-}
-
-.rating-box{
-    text-align:center;
-    background:white;
-    max-width:500px;
-    margin:0 auto 40px;
-    padding:30px;
-    border-radius:18px;
-    box-shadow:0 5px 20px rgba(0,0,0,.07);
-}
-
-.big-rating{
-    font-size:45px;
-    font-weight:bold;
-}
-
-.stars{
-    color:#ffb703;
-    font-size:28px;
-    letter-spacing:3px;
-}
-
-.review-form{
-    max-width:650px;
-    margin:auto;
-    background:white;
-    padding:25px;
-    border-radius:15px;
-}
-
-.review-form input,
-.review-form textarea,
-.review-form select,
-.enquiry-form input,
-.enquiry-form textarea,
-.enquiry-form select{
-    width:100%;
-    padding:12px;
-    margin:8px 0 15px;
-    border:1px solid #ddd;
+    padding:13px;
     border-radius:8px;
+    border:none;
 }
 
-.reviews{
-    max-width:850px;
-    margin:35px auto;
+/* FACILITIES */
+
+.facility-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
-.review{
+.facility{
     background:white;
-    padding:20px;
-    margin:12px 0;
-    border-radius:12px;
-    box-shadow:0 3px 15px rgba(0,0,0,.05);
+    border-radius:16px;
+    padding:28px 20px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+    transition:.3s;
 }
 
-.review-stars{
-    color:#ffb703;
+.facility:hover{
+    transform:translateY(-5px);
 }
+
+.facility .icon{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.facility p{
+    color:#687386;
+    font-size:14px;
+    margin-top:5px;
+}
+
+/* GALLERY */
 
 .gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    grid-template-columns:2fr 1fr;
+    grid-template-rows:250px 250px;
     gap:15px;
 }
 
 .gallery img{
     width:100%;
-    height:210px;
+    height:100%;
     object-fit:cover;
-    border-radius:14px;
-    background:#ddd;
+    border-radius:15px;
+    cursor:pointer;
+    transition:.3s;
 }
 
+.gallery img:hover{
+    transform:scale(1.015);
+}
+
+.gallery img:first-child{
+    grid-row:1 / 3;
+}
+
+/* RULES */
+
+.rules-section{
+    background:#f0f2f6;
+}
+
+.rules{
+    max-width:900px;
+    margin:auto;
+}
+
+.rule{
+    background:white;
+    padding:17px 20px;
+    margin:10px 0;
+    border-radius:10px;
+    box-shadow:0 3px 15px rgba(0,0,0,.04);
+}
+
+/* REVIEWS */
+
+.rating-summary{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 35px rgba(0,0,0,.07);
+}
+
+.rating-number{
+    font-size:55px;
+    font-weight:800;
+}
+
+.stars{
+    color:#f6b73c;
+    font-size:27px;
+}
+
+.review-form{
+    max-width:650px;
+    margin:35px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    margin:7px 0 13px;
+    font-family:inherit;
+}
+
+.review{
+    max-width:850px;
+    margin:12px auto;
+    padding:20px;
+    background:white;
+    border-radius:13px;
+}
+
+.review-stars{
+    color:#f6b73c;
+}
+
+/* CONTACT */
+
 .contact{
-    background:#101c3a;
+    background:#0b1428;
     color:white;
 }
 
 .contact-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:30px;
+    gap:35px;
 }
 
-.contact-box{
-    padding:25px;
+.contact-card{
+    background:#131f38;
+    padding:30px;
+    border-radius:18px;
 }
 
-.contact-box h3{
-    color:#ffb703;
-    margin-bottom:15px;
+.contact-card h3{
+    color:#f6b73c;
+    margin-bottom:18px;
 }
 
-.contact-box p{
-    margin:10px 0;
-}
-
-.phone-card{
-    background:rgba(255,255,255,.08);
-    padding:15px;
+.phone{
+    padding:16px;
+    background:rgba(255,255,255,.06);
     border-radius:10px;
-    margin:10px 0;
+    margin:12px 0;
 }
 
-.enquiry-form{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    color:#172033;
+.phone a{
+    margin-top:8px;
 }
+
+.enquiry{
+    background:white;
+    color:#172033;
+    padding:30px;
+    border-radius:18px;
+}
+
+/* FOOTER */
 
 footer{
+    background:#060d1c;
+    color:#9ca3af;
     text-align:center;
-    padding:25px;
-    background:#081127;
-    color:#aaa;
+    padding:30px;
 }
 
-.whatsapp-float{
+footer strong{
+    color:white;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp{
     position:fixed;
     right:20px;
     bottom:20px;
-    width:60px;
-    height:60px;
-    background:#25D366;
-    color:white;
+    width:62px;
+    height:62px;
     border-radius:50%;
+    background:#20c76b;
+    color:white;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:30px;
+    font-size:29px;
     text-decoration:none;
-    box-shadow:0 5px 20px rgba(0,0,0,.3);
-    z-index:9999;
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    z-index:2000;
 }
 
-@media(max-width:700px){
+/* MOBILE */
 
-    nav{
-        padding:13px 4%;
-    }
+@media(max-width:850px){
 
-    nav .links{
+    .nav-links{
         display:none;
     }
 
-    section{
-        padding:55px 5%;
+    .info-box{
+        grid-template-columns:1fr 1fr;
     }
 
-    .hero{
-        min-height:75vh;
-        padding:50px 5%;
+    .info-item{
+        border-bottom:1px solid #eee;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+    .room-grid{
+        grid-template-columns:1fr;
+    }
+
+    .facility-grid{
+        grid-template-columns:1fr 1fr;
     }
 
     .contact-grid{
         grid-template-columns:1fr;
     }
+
+    .gallery{
+        grid-template-columns:1fr;
+        grid-template-rows:auto;
+    }
+
+    .gallery img:first-child{
+        grid-row:auto;
+    }
+
+    .gallery img{
+        height:260px;
+    }
 }
+
+@media(max-width:500px){
+
+    section{
+        padding:65px 5%;
+    }
+
+    .hero{
+        padding-left:5%;
+        padding-right:5%;
+    }
+
+    .info-box{
+        grid-template-columns:1fr;
+    }
+
+    .facility-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 
-<nav>
+<!-- NAVIGATION -->
+
+<nav class="navbar">
 
 <div class="logo">
 Nandini <span>Hostel</span>
 </div>
 
-<div class="links">
-<a href="#home">Home</a>
+<div class="nav-links">
+<a href="#about">About</a>
 <a href="#rooms">Rooms</a>
 <a href="#facilities">Facilities</a>
+<a href="#gallery">Gallery</a>
 <a href="#rules">Rules</a>
 <a href="#reviews">Reviews</a>
 <a href="#contact">Contact</a>
@@ -454,31 +672,35 @@ Nandini <span>Hostel</span>
 
 <!-- HERO -->
 
-<section class="hero" id="home">
+<section class="hero">
 
 <div class="hero-content">
 
-<span class="badge">BOYS HOSTEL</span>
+<div class="tag">
+🏠 NANDINI BOYS HOSTEL
+</div>
 
 <h1>
-Nandini Boys Hostel
+A Friendly Place<br>
+<span>To Stay & Study</span>
 </h1>
 
 <p>
-Affordable and comfortable shared accommodation
-for students with a friendly environment.
+Affordable shared accommodation for boys,
+with attached bathrooms, hot water facilities
+and a friendly student environment.
 </p>
 
-<div class="price">
+<div class="hero-price">
 ₹2,000 / Person / Month
 </div>
 
-<a href="#rooms" class="btn btn-primary">
-🛏️ View Rooms
+<a href="#rooms" class="btn btn-gold">
+🛏️ Explore Rooms
 </a>
 
-<a href="#contact" class="btn btn-dark">
-📞 Contact Us
+<a href="#contact" class="btn btn-white">
+📞 Contact Hostel
 </a>
 
 </div>
@@ -486,69 +708,99 @@ for students with a friendly environment.
 </section>
 
 
-<!-- FACILITIES -->
+<!-- QUICK INFORMATION -->
 
-<section id="facilities">
+<div class="quick-info">
 
-<div class="section-title">
+<div class="info-box">
 
-<h2>Our Facilities</h2>
+<div class="info-item">
+<div class="icon">👨</div>
+<strong>Boys Only</strong>
+<span>Student Hostel</span>
+</div>
+
+<div class="info-item">
+<div class="icon">₹</div>
+<strong>₹2,000</strong>
+<span>Per Person / Month</span>
+</div>
+
+<div class="info-item">
+<div class="icon">🚿</div>
+<strong>Attached</strong>
+<span>Bathroom</span>
+</div>
+
+<div class="info-item">
+<div class="icon">💧</div>
+<strong>5–9 AM</strong>
+<span>Hot Water</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="about">
+
+<div class="about-image">
+
+<img
+src="hostel-front.jpg"
+alt="Nandini Boys Hostel">
+
+</div>
+
+<div class="about-text">
+
+<small>ABOUT NANDINI</small>
+
+<h2>
+Comfortable. Affordable. Friendly.
+</h2>
 
 <p>
-Everything available at Nandini Boys Hostel.
+Nandini Boys Hostel provides shared accommodation
+for students looking for an affordable and friendly
+place to stay.
 </p>
 
+<p>
+Rooms are available in 2, 3 and 4 sharing options,
+with an attached bathroom for each room.
+</p>
+
+<div class="check">
+<span>✓</span>
+₹2,000 per person
 </div>
 
-
-<div class="features">
-
-<div class="feature">
-<div class="feature-icon">🛏️</div>
-<h3>Shared Rooms</h3>
-<p>2, 3 and 4 sharing rooms available.</p>
+<div class="check">
+<span>✓</span>
+2 / 3 / 4 sharing rooms
 </div>
 
-<div class="feature">
-<div class="feature-icon">🚿</div>
-<h3>Attached Bathroom</h3>
-<p>Every room has its own separate attached bathroom.</p>
+<div class="check">
+<span>✓</span>
+Attached bathroom
 </div>
 
-<div class="feature">
-<div class="feature-icon">💧</div>
-<h3>Hot Water</h3>
-<p>Hot water available from 5:00 AM to 9:00 AM.</p>
+<div class="check">
+<span>✓</span>
+Hot water from 5 AM to 9 AM
 </div>
 
-<div class="feature">
-<div class="feature-icon">🍱</div>
-<h3>Mess Nearby</h3>
-<p>Many mess options are available near the hostel.</p>
+<div class="check">
+<span>✓</span>
+Friendly environment
 </div>
 
-<div class="feature">
-<div class="feature-icon">🤝</div>
-<h3>Friendly Environment</h3>
-<p>A friendly environment for students.</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">👨</div>
-<h3>Boys Only</h3>
-<p>Hostel accommodation is available only for boys.</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">⚡</div>
-<h3>Electricity</h3>
-<p>Electricity facility available.</p>
-</div>
-
-<div class="feature">
-<div class="feature-icon">📍</div>
-<h3>Convenient Location</h3>
-<p>Student-friendly surroundings.</p>
 </div>
 
 </div>
@@ -558,14 +810,16 @@ Everything available at Nandini Boys Hostel.
 
 <!-- ROOMS -->
 
-<section class="rooms" id="rooms">
+<section class="rooms-section" id="rooms">
 
-<div class="section-title">
+<div class="section-head">
 
-<h2>Rooms & Pricing</h2>
+<small>ACCOMMODATION</small>
+
+<h2>Choose Your Room</h2>
 
 <p>
-Choose your preferred sharing arrangement.
+Flexible sharing options for students.
 </p>
 
 </div>
@@ -576,11 +830,11 @@ Choose your preferred sharing arrangement.
 
 <div class="room-card">
 
-<div class="room-image">
-🛏️
+<div class="room-img">
+<img src="hostel-building.jpg" alt="2 Sharing Room">
 </div>
 
-<div class="room-content">
+<div class="room-body">
 
 <h3>2 Sharing</h3>
 
@@ -589,7 +843,7 @@ Choose your preferred sharing arrangement.
 </div>
 
 <ul>
-<li>✓ 2 boys per room</li>
+<li>✓ 2 students</li>
 <li>✓ Attached bathroom</li>
 <li>✓ Hot water 5–9 AM</li>
 <li>✓ Boys only</li>
@@ -602,11 +856,11 @@ Choose your preferred sharing arrangement.
 
 <div class="room-card">
 
-<div class="room-image">
-🛏️
+<div class="room-img">
+<img src="hostel-view.jpg" alt="3 Sharing Room">
 </div>
 
-<div class="room-content">
+<div class="room-body">
 
 <h3>3 Sharing</h3>
 
@@ -615,7 +869,7 @@ Choose your preferred sharing arrangement.
 </div>
 
 <ul>
-<li>✓ 3 boys per room</li>
+<li>✓ 3 students</li>
 <li>✓ Attached bathroom</li>
 <li>✓ Hot water 5–9 AM</li>
 <li>✓ Boys only</li>
@@ -628,11 +882,11 @@ Choose your preferred sharing arrangement.
 
 <div class="room-card">
 
-<div class="room-image">
-🛏️
+<div class="room-img">
+<img src="hostel-front.jpg" alt="4 Sharing Room">
 </div>
 
-<div class="room-content">
+<div class="room-body">
 
 <h3>4 Sharing</h3>
 
@@ -641,7 +895,7 @@ Choose your preferred sharing arrangement.
 </div>
 
 <ul>
-<li>✓ 4 boys per room</li>
+<li>✓ 4 students</li>
 <li>✓ Attached bathroom</li>
 <li>✓ Hot water 5–9 AM</li>
 <li>✓ Boys only</li>
@@ -654,44 +908,151 @@ Choose your preferred sharing arrangement.
 </div>
 
 
-<!-- SINGLE ROOM -->
+<div class="single-box">
 
-<div class="single-room">
-
-<h3>👤 Single Occupancy</h3>
+<h3>👤 Want the Room for Yourself?</h3>
 
 <p>
-Single occupancy is available. However, the person taking
-the complete room must pay the fee for all beds in that room.
+Single occupancy is possible. The person taking
+the complete room must pay the total fee for all
+available beds in that room.
 </p>
 
 <br>
 
 <p>
-Example: A 4-sharing room occupied by one person =
-₹2,000 × 4 = ₹8,000/month.
+Example: 4-sharing room × ₹2,000 =
+<strong>₹8,000/month</strong>
 </p>
-
 
 <div class="calculator">
 
 <input
 type="number"
-id="roomCapacity"
+id="capacity"
 min="2"
 max="4"
-placeholder="Room capacity: 2–4"
->
+placeholder="Room capacity (2–4)">
 
 <button
-class="btn btn-primary"
-onclick="calculateFee()">
-Calculate Fee
+class="btn btn-gold"
+onclick="calculate()">
+
+Calculate
+
 </button>
 
 </div>
 
-<div id="calculatedFee"></div>
+<p id="result"></p>
+
+</div>
+
+</section>
+
+
+<!-- FACILITIES -->
+
+<section id="facilities">
+
+<div class="section-head">
+
+<small>WHAT WE OFFER</small>
+
+<h2>Facilities & Environment</h2>
+
+<p>
+Everything you should know before choosing Nandini Hostel.
+</p>
+
+</div>
+
+
+<div class="facility-grid">
+
+<div class="facility">
+<div class="icon">🚿</div>
+<h3>Attached Bathroom</h3>
+<p>Bathroom is attached to each room and separated from the living space.</p>
+</div>
+
+<div class="facility">
+<div class="icon">💧</div>
+<h3>Hot Water</h3>
+<p>Hot water is available every morning from 5 AM to 9 AM.</p>
+</div>
+
+<div class="facility">
+<div class="icon">🍱</div>
+<h3>Nearby Mess</h3>
+<p>There are several mess options near the hostel.</p>
+</div>
+
+<div class="facility">
+<div class="icon">🤝</div>
+<h3>Friendly Environment</h3>
+<p>A student-friendly and social environment.</p>
+</div>
+
+<div class="facility">
+<div class="icon">📶</div>
+<h3>Wi-Fi</h3>
+<p>Wi-Fi availability can be confirmed with management.</p>
+</div>
+
+<div class="facility">
+<div class="icon">👨</div>
+<h3>Boys Only</h3>
+<p>Accommodation is available only for boys.</p>
+</div>
+
+<div class="facility">
+<div class="icon">📚</div>
+<h3>No Dedicated Study Area</h3>
+<p>The hostel does not currently have a separate study room.</p>
+</div>
+
+<div class="facility">
+<div class="icon">🚗</div>
+<h3>No Parking</h3>
+<p>Dedicated parking facility is not available.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<div class="section-head">
+
+<small>OUR HOSTEL</small>
+
+<h2>Photo Gallery</h2>
+
+<p>
+Take a look at Nandini Boys Hostel.
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+<img
+src="hostel-front.jpg"
+alt="Nandini Hostel Front">
+
+<img
+src="hostel-view.jpg"
+alt="Hostel Surroundings">
+
+<img
+src="hostel-building.jpg"
+alt="Nandini Hostel Building">
 
 </div>
 
@@ -700,59 +1061,61 @@ Calculate Fee
 
 <!-- RULES -->
 
-<section id="rules">
+<section class="rules-section" id="rules">
 
-<div class="section-title">
+<div class="section-head">
 
-<h2>📋 Hostel Rules</h2>
+<small>IMPORTANT</small>
+
+<h2>Hostel Rules</h2>
 
 <p>
-Please follow these rules to maintain a peaceful environment.
+A few basic rules help maintain a peaceful environment.
 </p>
 
 </div>
 
 
-<div class="rules-container">
+<div class="rules">
 
 <div class="rule">
-1️⃣ Only boys are allowed to stay in the hostel.
+👨 Only boys are permitted to stay.
 </div>
 
 <div class="rule">
-2️⃣ Maintain cleanliness in rooms and attached bathrooms.
+🧹 Keep rooms and attached bathrooms clean.
 </div>
 
 <div class="rule">
-3️⃣ Respect roommates, residents and hostel management.
+🤝 Respect roommates and other residents.
 </div>
 
 <div class="rule">
-4️⃣ Smoking and alcohol are not allowed inside the hostel.
+🔇 Avoid excessive noise and disturbance.
 </div>
 
 <div class="rule">
-5️⃣ Do not damage hostel property.
+🚭 Smoking and alcohol are not permitted inside the hostel.
 </div>
 
 <div class="rule">
-6️⃣ Maintain reasonable noise levels.
+🏠 Do not damage hostel property.
 </div>
 
 <div class="rule">
-7️⃣ Pay hostel fees on time.
+💰 Pay hostel fees on time.
 </div>
 
 <div class="rule">
-8️⃣ Visitors must follow hostel guidelines.
+👥 Visitors must follow hostel management guidelines.
 </div>
 
 <div class="rule">
-9️⃣ Keep your personal belongings safely.
+🧹 Maintain cleanliness in common areas.
 </div>
 
 <div class="rule">
-🔟 Follow additional instructions from hostel management.
+📋 Follow reasonable instructions from hostel management.
 </div>
 
 </div>
@@ -764,28 +1127,34 @@ Please follow these rules to maintain a peaceful environment.
 
 <section id="reviews">
 
-<div class="section-title">
+<div class="section-head">
 
-<h2>⭐ Student Ratings & Reviews</h2>
+<small>STUDENT EXPERIENCE</small>
+
+<h2>Ratings & Reviews</h2>
 
 <p>
-Everyone can view reviews and ratings.
+Students can share their experience with the hostel.
 </p>
 
 </div>
 
 
-<div class="rating-box">
+<div class="rating-summary">
 
-<div class="big-rating" id="averageRating">
+<div
+class="rating-number"
+id="average">
 0.0
 </div>
 
-<div class="stars" id="averageStars">
+<div
+class="stars"
+id="stars">
 ☆☆☆☆☆
 </div>
 
-<p id="reviewCount">
+<p id="count">
 No reviews yet
 </p>
 
@@ -794,42 +1163,28 @@ No reviews yet
 
 <div class="review-form">
 
-<h3>⭐ Rate Your Experience</h3>
+<h3>⭐ Leave a Review</h3>
 
 <form id="reviewForm">
 
 <input
-type="text"
 id="reviewName"
-placeholder="Your Name"
-required
->
+placeholder="Your name"
+required>
 
-<select id="reviewRating" required>
+<select
+id="reviewRating"
+required>
 
 <option value="">
-Select Rating
+Select rating
 </option>
 
-<option value="5">
-⭐⭐⭐⭐⭐ 5 Stars
-</option>
-
-<option value="4">
-⭐⭐⭐⭐ 4 Stars
-</option>
-
-<option value="3">
-⭐⭐⭐ 3 Stars
-</option>
-
-<option value="2">
-⭐⭐ 2 Stars
-</option>
-
-<option value="1">
-⭐ 1 Star
-</option>
+<option value="5">★★★★★ 5</option>
+<option value="4">★★★★☆ 4</option>
+<option value="3">★★★☆☆ 3</option>
+<option value="2">★★☆☆☆ 2</option>
+<option value="1">★☆☆☆☆ 1</option>
 
 </select>
 
@@ -841,9 +1196,11 @@ required>
 </textarea>
 
 <button
-class="btn btn-primary"
+class="btn btn-gold"
 type="submit">
+
 Submit Review
+
 </button>
 
 </form>
@@ -851,37 +1208,7 @@ Submit Review
 </div>
 
 
-<div class="reviews" id="reviewsList"></div>
-
-</section>
-
-
-<!-- GALLERY -->
-
-<section>
-
-<div class="section-title">
-
-<h2>📸 Hostel Gallery</h2>
-
-<p>
-Add real hostel photos here.
-</p>
-
-</div>
-
-
-<div class="gallery">
-
-<img src="hostel.jpg" alt="Hostel">
-
-<img src="room1.jpg" alt="Hostel Room">
-
-<img src="room2.jpg" alt="Hostel Room">
-
-<img src="bathroom.jpg" alt="Attached Bathroom">
-
-</div>
+<div id="reviewsList"></div>
 
 </section>
 
@@ -890,14 +1217,14 @@ Add real hostel photos here.
 
 <section class="contact" id="contact">
 
-<div class="section-title">
+<div class="section-head">
 
-<h2 style="color:white;">
-📞 Contact Nandini Boys Hostel
-</h2>
+<small>GET IN TOUCH</small>
 
-<p style="color:#ddd;">
-Call or WhatsApp us directly for room enquiries.
+<h2>Contact Nandini Hostel</h2>
+
+<p style="color:#b9c1d1;">
+Call or WhatsApp us for room availability and enquiries.
 </p>
 
 </div>
@@ -906,124 +1233,102 @@ Call or WhatsApp us directly for room enquiries.
 <div class="contact-grid">
 
 
-<div class="contact-box">
+<div class="contact-card">
 
-<h3>
-🏠 Nandini Boys Hostel
-</h3>
-
-<p>👨 Boys Hostel</p>
-
-<p>🛏️ 2 / 3 / 4 Sharing Rooms</p>
-
-<p>💰 ₹2,000 / person / month</p>
-
-<p>🚿 Attached Bathroom</p>
-
-<p>💧 Hot Water: 5 AM – 9 AM</p>
-
-<p>🍱 Multiple Mess Options Nearby</p>
-
-<p>🤝 Friendly Environment</p>
-
-<br>
+<h3>📞 Contact Numbers</h3>
 
 
-<div class="phone-card">
+<div class="phone">
 
 <strong>
-📱 9595953075
+9595953075
 </strong>
 
 <br>
 
 <a
 href="tel:+919595953075"
-class="btn btn-primary">
+class="btn btn-gold">
+
 📞 Call
+
 </a>
 
 <a
-href="https://wa.me/919595953075?text=Hello%20Nandini%20Boys%20Hostel,%20I%20am%20interested%20in%20a%20room."
+href="https://wa.me/919595953075?text=Hello%20Nandini%20Boys%20Hostel%2C%20I%20want%20to%20know%20about%20room%20availability."
 target="_blank"
-class="btn btn-whatsapp">
+class="btn btn-green">
+
 💬 WhatsApp
+
 </a>
 
 </div>
 
 
-<div class="phone-card">
+<div class="phone">
 
 <strong>
-📱 9595353075
+9595353075
 </strong>
 
 <br>
 
 <a
 href="tel:+919595353075"
-class="btn btn-primary">
+class="btn btn-gold">
+
 📞 Call
+
 </a>
 
 <a
-href="https://wa.me/919595353075?text=Hello%20Nandini%20Boys%20Hostel,%20I%20am%20interested%20in%20a%20room."
+href="https://wa.me/919595353075?text=Hello%20Nandini%20Boys%20Hostel%2C%20I%20want%20to%20know%20about%20room%20availability."
 target="_blank"
-class="btn btn-whatsapp">
+class="btn btn-green">
+
 💬 WhatsApp
+
 </a>
 
 </div>
 
+
+<p style="margin-top:20px;color:#b9c1d1;">
+🕘 Contact management for current room availability,
+fees and other details.
+</p>
+
 </div>
 
 
-<!-- ENQUIRY -->
+<div class="enquiry">
 
-<div class="enquiry-form">
+<h3>📝 Quick Room Enquiry</h3>
 
-<h3>
-📝 Room Enquiry
-</h3>
-
-<form onsubmit="sendEnquiry(event)">
+<form
+onsubmit="sendWhatsApp(event)">
 
 <input
-type="text"
 id="name"
 placeholder="Your Name"
-required
->
+required>
 
 <input
-type="tel"
-id="phone"
+id="mobile"
 placeholder="Your Mobile Number"
-required
->
+required>
 
-<select id="roomType" required>
+<select id="room">
 
 <option value="">
 Select Room Type
 </option>
 
-<option>
-2 Sharing
-</option>
-
-<option>
-3 Sharing
-</option>
-
-<option>
-4 Sharing
-</option>
-
-<option>
-Single Occupancy
-</option>
+<option>2 Sharing</option>
+<option>3 Sharing</option>
+<option>4 Sharing</option>
+<option>Single Occupancy</option>
 
 </select>
 
@@ -1034,10 +1339,10 @@ placeholder="Your message">
 </textarea>
 
 <button
-class="btn btn-whatsapp"
+class="btn btn-green"
 type="submit">
 
-💬 Send Enquiry on WhatsApp
+💬 Send on WhatsApp
 
 </button>
 
@@ -1050,343 +1355,104 @@ type="submit">
 </section>
 
 
-<!-- FLOATING WHATSAPP -->
-
-<a
-href="https://wa.me/919595953075?text=Hello%20Nandini%20Boys%20Hostel,%20I%20want%20to%20know%20about%20room%20availability."
-target="_blank"
-class="whatsapp-float"
-title="WhatsApp">
-💬
-</a>
-
-
 <!-- FOOTER -->
 
 <footer>
 
 <p>
-© 2026 Nandini Boys Hostel
+<strong>Nandini Boys Hostel</strong>
 </p>
 
 <p>
 Comfortable • Affordable • Friendly
 </p>
 
+<p>
+© 2026 Nandini Boys Hostel. All rights reserved.
+</p>
+
 </footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/919595953075?text=Hello%20Nandini%20Boys%20Hostel%2C%20I%20am%20interested%20in%20a%20room."
+target="_blank">
+
+💬
+
+</a>
 
 
 <script>
 
-/* =========================
-   SINGLE ROOM CALCULATOR
-========================= */
+/* SINGLE ROOM CALCULATOR */
 
-function calculateFee(){
+function calculate(){
 
-    const capacity =
-    parseInt(
-        document.getElementById("roomCapacity").value
+    let capacity =
+    Number(
+        document.getElementById("capacity").value
     );
 
-    const output =
-    document.getElementById("calculatedFee");
+    let result =
+    document.getElementById("result");
 
-    if(
-        isNaN(capacity) ||
-        capacity < 2 ||
-        capacity > 4
-    ){
+    if(capacity < 2 || capacity > 4){
 
-        output.innerText =
+        result.innerText =
         "Please enter 2, 3 or 4.";
 
+        result.style.color="#ff6b6b";
+
         return;
     }
 
-    const fee =
+    let fee =
     capacity * 2000;
 
-    output.innerText =
+    result.innerText =
     "Single occupancy fee: ₹" +
     fee.toLocaleString("en-IN") +
-    " / month";
+    " per month.";
+
+    result.style.color="#f6b73c";
 }
 
 
-/* =========================
-   REVIEWS
-========================= */
+/* WHATSAPP ENQUIRY */
 
-let reviews =
-JSON.parse(
-    localStorage.getItem("nandiniReviews")
-) || [];
-
-
-function escapeHTML(text){
-
-    const div =
-    document.createElement("div");
-
-    div.textContent = text;
-
-    return div.innerHTML;
-}
-
-
-function displayReviews(){
-
-    const list =
-    document.getElementById("reviewsList");
-
-    list.innerHTML = "";
-
-
-    if(reviews.length === 0){
-
-        list.innerHTML =
-        `<p style="
-        text-align:center;
-        color:#667085;">
-        No reviews yet. Be the first to review!
-        </p>`;
-
-    }
-
-
-    reviews.forEach(review => {
-
-        const div =
-        document.createElement("div");
-
-        div.className = "review";
-
-        div.innerHTML = `
-
-        <h3>
-        ${escapeHTML(review.name)}
-        </h3>
-
-        <div class="review-stars">
-        ${"★".repeat(review.rating)}
-        ${"☆".repeat(5-review.rating)}
-        </div>
-
-        <p>
-        ${escapeHTML(review.text)}
-        </p>
-
-        `;
-
-        list.appendChild(div);
-
-    });
-
-
-    updateAverage();
-}
-
-
-function updateAverage(){
-
-    const average =
-    document.getElementById(
-        "averageRating"
-    );
-
-    const stars =
-    document.getElementById(
-        "averageStars"
-    );
-
-    const count =
-    document.getElementById(
-        "reviewCount"
-    );
-
-
-    if(reviews.length === 0){
-
-        average.innerText = "0.0";
-
-        stars.innerText =
-        "☆☆☆☆☆";
-
-        count.innerText =
-        "No reviews yet";
-
-        return;
-    }
-
-
-    const total =
-    reviews.reduce(
-        (sum, review) =>
-        sum + Number(review.rating),
-        0
-    );
-
-
-    const avg =
-    total / reviews.length;
-
-
-    average.innerText =
-    avg.toFixed(1);
-
-
-    const rounded =
-    Math.round(avg);
-
-
-    stars.innerText =
-    "★".repeat(rounded) +
-    "☆".repeat(5-rounded);
-
-
-    count.innerText =
-    reviews.length +
-    (
-        reviews.length === 1
-        ? " review"
-        : " reviews"
-    );
-}
-
-
-document
-.getElementById("reviewForm")
-.addEventListener(
-"submit",
-function(event){
+function sendWhatsApp(event){
 
     event.preventDefault();
 
+    let name =
+    document.getElementById("name").value;
 
-    const name =
-    document.getElementById(
-        "reviewName"
-    ).value.trim();
+    let mobile =
+    document.getElementById("mobile").value;
 
+    let room =
+    document.getElementById("room").value;
 
-    const rating =
-    Number(
-        document.getElementById(
-            "reviewRating"
-        ).value
-    );
+    let message =
+    document.getElementById("message").value;
 
 
-    const text =
-    document.getElementById(
-        "reviewText"
-    ).value.trim();
-
-
-    if(
-        !name ||
-        !rating ||
-        !text
-    ){
-        return;
-    }
-
-
-    reviews.push({
-
-        name:name,
-
-        rating:rating,
-
-        text:text
-
-    });
-
-
-    localStorage.setItem(
-        "nandiniReviews",
-        JSON.stringify(reviews)
-    );
-
-
-    this.reset();
-
-    displayReviews();
-
-
-    alert(
-        "Thank you! Your review has been submitted."
-    );
-
-});
-
-
-/* =========================
-   WHATSAPP ENQUIRY
-========================= */
-
-function sendEnquiry(event){
-
-    event.preventDefault();
-
-
-    const name =
-    document.getElementById(
-        "name"
-    ).value;
-
-
-    const phone =
-    document.getElementById(
-        "phone"
-    ).value;
-
-
-    const room =
-    document.getElementById(
-        "roomType"
-    ).value;
-
-
-    const message =
-    document.getElementById(
-        "message"
-    ).value;
-
-
-    const whatsappMessage =
-
+    let text =
     `Hello Nandini Boys Hostel 👋
 
-I am interested in a room.
+I want to enquire about accommodation.
 
-👤 Name: ${name}
+Name: ${name}
+Mobile: ${mobile}
+Room: ${room}
 
-📱 Mobile: ${phone}
-
-🛏️ Room Type: ${room}
-
-💬 Message: ${message}`;
+Message:
+${message}`;
 
 
     window.open(
-
-        "https://wa.me/919595953075?text=" +
-        encodeURIComponent(
-            whatsappMessage
-        ),
-
-        "_blank"
-    );
-}
-
-
-/* LOAD REVIEWS */
-
-displayReviews();
-
-</script>
-
-</body>
-    </html>
+     
